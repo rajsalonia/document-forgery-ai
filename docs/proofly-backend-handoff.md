@@ -1,8 +1,6 @@
-# Proofly backend intelligence handoff
+# Proofly Backend Intelligence Architecture & Forensic Specification
 
-Implemented on `feature/proofly-ai-backend`. Frontend files and the pre-existing
-uncommitted `backend/proofly/` prototype are outside this change. The stable engine
-is `backend/intelligence/`; it does not use prototype regulatory rules as evidence.
+Technical specification for the Proofly verification pipeline and intelligence subsystem (`backend/intelligence/`).
 
 ## Architecture and existing-system audit
 
@@ -17,7 +15,7 @@ Existing calibration: `backend/train_model.py`; dataset generation and grouping:
 `backend/generate_dataset.py`, `backend/dataset_manager.py`. Existing evaluation:
 `evaluate.py`, `backend/evaluate_model.py`, `outputs/evaluation_results.json`.
 Legacy API: `/upload`, `/api/analyze`, `/api/analyze-sample/{filename}`,
-`/api/samples`, `/api/health` (other agent may extend these).
+`/api/samples`, `/api/health` (extensible endpoints).
 
 New pipeline: bounded page decoding -> OCR with original rendered coordinates ->
 span-localized fields/claims -> independent visual checks -> passive QR/URL

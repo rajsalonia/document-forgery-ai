@@ -126,7 +126,7 @@ export default function App() {
     }, 400);
 
     try {
-      const response = await fetch(`${API_BASE}/api/codex-demos/analyze/${encodeURIComponent(sampleId)}`, {
+      const response = await fetch(`${API_BASE}/api/demos/analyze/${encodeURIComponent(sampleId)}`, {
         method: 'POST',
       });
 
