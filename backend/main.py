@@ -820,7 +820,8 @@ def get_demo_image(filename: str):
     return FileResponse(img_path, media_type="image/png")
 
 
-@app.post("/api/codex-demos/analyze/{sample_id}")
+@app.post("/api/demos/analyze/{sample_id}")
+@app.post("/api/codex-demos/analyze/{sample_id}", include_in_schema=False)
 def analyze_codex_demo(sample_id: str):
     valid_samples = ["guaranteed_return", "broker_impersonation", "educational_control", "tampered_demo", "original_demo"]
     if sample_id not in valid_samples:
