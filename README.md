@@ -7,16 +7,17 @@
 **Explainable Multimodal Document & Communication Fraud Verification Platform**
 
 [![Live Demo](https://img.shields.io/badge/Live%20Application-HTTPS%20Online-success.svg)](https://proofly-app.onrender.com)
-[![CI](https://github.com/17rajsal/document-forgery-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/17rajsal/document-forgery-ai/actions/workflows/ci.yml)
+[![CI](https://github.com/rajsalonia/document-forgery-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/rajsalonia/document-forgery-ai/actions/workflows/ci.yml)
 [![FastAPI](https://img.shields.io/badge/Backend-FastAPI%20%2B%20Python%203.12-009688.svg)](https://fastapi.tiangolo.com)
 [![React](https://img.shields.io/badge/Frontend-React%2019%20%2B%20TailwindCSS-61DAFB.svg)](https://react.dev)
 [![Docker](https://img.shields.io/badge/Deployment-Docker%20Multi--Stage-2496ED.svg)](https://docker.com)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 </div>
 
+**[Try the hosted demo](https://proofly-app.onrender.com/) · [Explore the source](https://github.com/rajsalonia/document-forgery-ai) · [Quick start](#-quick-start--local-setup) · [Security policy](SECURITY.md)**
+
 > [!TIP]
-> 🌐 **Production Web Application (Render)**: [https://proofly-app.onrender.com](https://proofly-app.onrender.com)  
+> 🌐 **Hosted application demo (Render)**: [https://proofly-app.onrender.com](https://proofly-app.onrender.com)  
 > Configured and deployed via Render Multi-Stage Docker Blueprint (`render.yaml` + `Dockerfile`). Access the live application directly in any desktop or mobile browser without logging in. Both the React 19 SPA frontend and the FastAPI backend are unified in a single high-performance container.
 
 ---
@@ -143,7 +144,7 @@ flowchart TD
 
 ### 1. Clone & Set Up Backend
 ```bash
-git clone https://github.com/17rajsal/document-forgery-ai.git
+git clone https://github.com/rajsalonia/document-forgery-ai.git
 cd document-forgery-ai
 
 # Activate virtual environment
@@ -215,14 +216,14 @@ python backend/test_integration.py
 
 ## 🏛️ Hackathon Context & Heritage
 
-Proofly was originally prototyped for the **SANGYAN Investor Resilience Hackathon** organized by **IIT (BHU)** in collaboration with **SEBI and NSDL** (Track A: Digital Fraud Resilience & Track E: Misinformation & Content Literacy). The codebase has since been evolved into an independent, production-grade fraud and document verification service.
+Proofly was originally prototyped for the **SANGYAN Investor Resilience Hackathon** organized by **IIT (BHU)** in collaboration with **SEBI and NSDL** (Track A: Digital Fraud Resilience & Track E: Misinformation & Content Literacy). The codebase has since been evolved into an independent, explainable fraud and document verification prototype with a hosted demo.
 
 ---
 
 ## 🔗 Official Repository & Links
 
-- **GitHub Repository**: [https://github.com/17rajsal/document-forgery-ai](https://github.com/17rajsal/document-forgery-ai)
-- **Live Production Application**: [https://proofly-app.onrender.com](https://proofly-app.onrender.com)
+- **GitHub Repository**: [https://github.com/rajsalonia/document-forgery-ai](https://github.com/rajsalonia/document-forgery-ai)
+- **Hosted Demo**: [https://proofly-app.onrender.com](https://proofly-app.onrender.com)
 - **Security Policy**: [SECURITY.md](SECURITY.md)
 
 ---
