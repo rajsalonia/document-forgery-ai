@@ -107,7 +107,7 @@ flowchart TD
         S["POST /upload & /api/analyze"]
         T["POST /api/analyze-text"]
         E["POST /api/verify-entity"]
-        D["POST /api/codex-demos/analyze/{id}"]
+        D["POST /api/demos/analyze/{id}"]
     end
 
     subgraph Forensics["Multimodal Verification Engine"]

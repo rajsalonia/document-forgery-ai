@@ -40,7 +40,7 @@ logger = logging.getLogger("document_forgery_ai")
 
 app = FastAPI(
     title="Document Forgery AI API",
-    description="Enterprise-grade document classification, multi-pass OCR extraction, and multi-layer forensic tampering detection.",
+    description="Document classification, multi-pass OCR extraction, and multi-layer forensic tampering detection.",
     version="2.1.0"
 )
 
@@ -727,10 +727,16 @@ def analyze_proofly_demo(demo_id: str):
 
 
 
-CODEX_DEMO_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "demo_samples"))
-CODEX_IMAGES_DIR = os.path.join(CODEX_DEMO_DIR, "images")
-CODEX_TEXT_DIR = os.path.join(CODEX_DEMO_DIR, "text")
-CODEX_META_DIR = os.path.join(CODEX_DEMO_DIR, "metadata")
+DEMO_SAMPLES_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "demo_samples"))
+DEMO_IMAGES_DIR = os.path.join(DEMO_SAMPLES_DIR, "images")
+DEMO_TEXT_DIR = os.path.join(DEMO_SAMPLES_DIR, "text")
+DEMO_META_DIR = os.path.join(DEMO_SAMPLES_DIR, "metadata")
+
+# Backward compatibility aliases
+CODEX_DEMO_DIR = DEMO_SAMPLES_DIR
+CODEX_IMAGES_DIR = DEMO_IMAGES_DIR
+CODEX_TEXT_DIR = DEMO_TEXT_DIR
+CODEX_META_DIR = DEMO_META_DIR
 
 # Public samples are curated synthetic assets, never runtime user uploads.
 PUBLIC_SAMPLE_DOCUMENTS = {
@@ -742,10 +748,11 @@ PUBLIC_SAMPLE_DOCUMENTS = {
 }
 
 
-@app.get("/api/codex-demos")
-def get_codex_demos_api():
+@app.get("/api/demos")
+@app.get("/api/codex-demos", include_in_schema=False)
+def get_demos_api():
     """
-    Returns official Codex demo fixtures for scam detection and document tampering.
+    Returns curated demo fixtures for scam detection and document tampering.
     """
     return {
         "demos": [
@@ -803,10 +810,11 @@ def get_codex_demos_api():
     }
 
 
-@app.get("/api/codex-demos/image/{filename}")
-def get_codex_demo_image(filename: str):
+@app.get("/api/demos/image/{filename}")
+@app.get("/api/codex-demos/image/{filename}", include_in_schema=False)
+def get_demo_image(filename: str):
     safe_name = os.path.basename(filename)
-    img_path = os.path.join(CODEX_IMAGES_DIR, safe_name)
+    img_path = os.path.join(DEMO_IMAGES_DIR, safe_name)
     if not os.path.exists(img_path):
         raise HTTPException(status_code=404, detail="Demo image not found.")
     return FileResponse(img_path, media_type="image/png")
@@ -850,8 +858,8 @@ def analyze_codex_demo(sample_id: str):
             "field": "Investment Amount",
             "before": "₹5,000",
             "after": "₹50,000",
-            "original_image_url": "/api/codex-demos/image/original_demo.png",
-            "tampered_image_url": "/api/codex-demos/image/tampered_demo.png",
+            "original_image_url": "/api/demos/image/original_demo.png",
+            "tampered_image_url": "/api/demos/image/tampered_demo.png",
             "box": [324, 268, 200, 46]
         }
     elif sample_id == "original_demo":
@@ -871,8 +879,8 @@ def analyze_codex_demo(sample_id: str):
             "field": "Investment Amount",
             "before": "₹5,000",
             "after": "₹5,000 (Unaltered)",
-            "original_image_url": "/api/codex-demos/image/original_demo.png",
-            "tampered_image_url": "/api/codex-demos/image/tampered_demo.png",
+            "original_image_url": "/api/demos/image/original_demo.png",
+            "tampered_image_url": "/api/demos/image/tampered_demo.png",
             "box": [324, 268, 200, 46]
         }
     elif sample_id == "educational_control":
