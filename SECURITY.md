@@ -7,7 +7,7 @@ We take the security and integrity of Proofly seriously. If you believe you have
 ### Responsible Disclosure Guidelines
 
 - **Do NOT open a public GitHub issue** for suspected security vulnerabilities or leaks.
-- Please report vulnerabilities privately via [GitHub Private Vulnerability Reporting](https://github.com/17rajsal/document-forgery-ai/security/advisories/new).
+- Please report vulnerabilities privately via [GitHub Private Vulnerability Reporting](https://github.com/rajsalonia/document-forgery-ai/security/advisories/new).
 - Provide a detailed description of the vulnerability, including step-by-step reproduction steps or proof-of-concept payloads.
 - Allow reasonable time for the maintainers to investigate and address the vulnerability before public disclosure.
 
