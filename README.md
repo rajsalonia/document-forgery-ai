@@ -7,7 +7,7 @@
 **Explainable Multimodal Document & Communication Fraud Verification Platform**
 
 [![Live Demo](https://img.shields.io/badge/Live%20Application-HTTPS%20Online-success.svg)](https://proofly-app.onrender.com)
-[![CI](https://github.com/17rajsal/document-forgery-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/17rajsal/document-forgery-ai/actions/workflows/ci.yml)
+[![CI](https://github.com/rajsalonia/document-forgery-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/rajsalonia/document-forgery-ai/actions/workflows/ci.yml)
 [![FastAPI](https://img.shields.io/badge/Backend-FastAPI%20%2B%20Python%203.12-009688.svg)](https://fastapi.tiangolo.com)
 [![React](https://img.shields.io/badge/Frontend-React%2019%20%2B%20TailwindCSS-61DAFB.svg)](https://react.dev)
 [![Docker](https://img.shields.io/badge/Deployment-Docker%20Multi--Stage-2496ED.svg)](https://docker.com)
@@ -16,7 +16,7 @@
 </div>
 
 > [!TIP]
-> 🌐 **Production Web Application (Render)**: [https://proofly-app.onrender.com](https://proofly-app.onrender.com)  
+> 🌐 **Hosted web application URL (availability not independently verified)**: [https://proofly-app.onrender.com](https://proofly-app.onrender.com)  
 > Configured and deployed via Render Multi-Stage Docker Blueprint (`render.yaml` + `Dockerfile`). Access the live application directly in any desktop or mobile browser without logging in. Both the React 19 SPA frontend and the FastAPI backend are unified in a single high-performance container.
 
 ---
@@ -143,7 +143,7 @@ flowchart TD
 
 ### 1. Clone & Set Up Backend
 ```bash
-git clone https://github.com/17rajsal/document-forgery-ai.git
+git clone https://github.com/rajsalonia/document-forgery-ai.git
 cd document-forgery-ai
 
 # Activate virtual environment
@@ -186,7 +186,7 @@ docker-compose up --build
 
 ---
 
-## 🧪 Comprehensive Test Suite (100% Pass Rate)
+## 🧪 Automated Test Suite (repository-reported results)
 
 Proofly includes rigorous test suites validating security, ML inference, entity verification, and API stability:
 
@@ -221,8 +221,8 @@ Proofly was originally prototyped for the **SANGYAN Investor Resilience Hackatho
 
 ## 🔗 Official Repository & Links
 
-- **GitHub Repository**: [https://github.com/17rajsal/document-forgery-ai](https://github.com/17rajsal/document-forgery-ai)
-- **Live Production Application**: [https://proofly-app.onrender.com](https://proofly-app.onrender.com)
+- **GitHub Repository**: [https://github.com/rajsalonia/document-forgery-ai](https://github.com/rajsalonia/document-forgery-ai)
+- **Hosted application**: [https://proofly-app.onrender.com](https://proofly-app.onrender.com)
 - **Security Policy**: [SECURITY.md](SECURITY.md)
 
 ---
@@ -230,3 +230,6 @@ Proofly was originally prototyped for the **SANGYAN Investor Resilience Hackatho
 <div align="center">
   <sub>Proofly provides risk indicators and educational safety guidance. It does not guarantee authenticity or replace official verification.</sub>
 </div>
+
+
+> **Verification note (October 2026):** The commands and pass counts above are taken from existing project documentation; they have not been rerun during this README review. The hosted Render application has not been independently verified end to end, and fraud indicators are informational rather than legal or financial verification.
