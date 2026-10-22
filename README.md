@@ -14,7 +14,7 @@
 
 </div>
 
-**[Try the hosted demo](https://proofly-app.onrender.com/) · [Explore the source](https://github.com/rajsalonia/document-forgery-ai) · [Quick start](#-quick-start--local-setup) · [Security policy](SECURITY.md)**
+**[Try the hosted demo](https://proofly-app.onrender.com/) · [Explore the source](https://github.com/rajsalonia/document-forgery-ai) · [Quick start](#-quick-start--local-setup) · [Contributing](CONTRIBUTING.md) · [Security policy](SECURITY.md)**
 
 > [!TIP]
 > 🌐 **Hosted application demo (Render)**: [https://proofly-app.onrender.com](https://proofly-app.onrender.com)  
